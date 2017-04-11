@@ -88,5 +88,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * setOnCompletionListener Callback: Testing asynchronous Callbacks!
+         */
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Toast.makeText(getApplicationContext(), "I 'm done!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
